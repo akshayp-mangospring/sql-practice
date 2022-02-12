@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS books_data;
-CREATE DATABASE books_data;
-USE books_data;
+DROP DATABASE IF EXISTS book_shop;
+CREATE DATABASE book_shop;
+USE book_shop;
 
 CREATE TABLE books (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
