@@ -44,16 +44,16 @@ ORDER BY release_year DESC;
 SELECT
   author_fname AS 'First name',
   author_lname AS 'Last name',
-  MAX(pages) AS 'Longest Book Pagecount'
+  MAX(pages) AS longest_book_pagecount
 FROM books
 GROUP BY author_fname, author_lname
-ORDER BY MAX(pages) DESC;
+ORDER BY longest_book_pagecount DESC;
 
 -- Shortest Page Count for Each Author
 SELECT
   author_fname AS 'First name',
   author_lname AS 'Last name',
-  MIN(pages) AS 'Shortest Book Pagecount'
+  MIN(pages) AS shortest_book_pagecount
 FROM books
 GROUP BY author_fname, author_lname
-ORDER BY MIN(pages);
+ORDER BY shortest_book_pagecount;

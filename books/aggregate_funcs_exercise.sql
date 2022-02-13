@@ -26,10 +26,10 @@ FROM books;
 SELECT
   author_fname AS 'First Name',
   author_lname AS 'Last Name',
-  AVG(release_year) AS 'Avg Release Year'
+  AVG(release_year) AS avg_release_year
 FROM books
 GROUP BY author_fname, author_lname
-ORDER BY AVG(release_year);
+ORDER BY avg_release_year;
 
 -- Full name of the Author who wrote the longest book
 SELECT

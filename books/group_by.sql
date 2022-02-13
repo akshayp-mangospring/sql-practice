@@ -21,17 +21,17 @@ FROM books
 SELECT
   author_fname,
   author_lname,
-  SUM(pages) AS 'Pages Written'
+  SUM(pages) AS pages_written
 FROM books
   GROUP BY author_fname, author_lname
-  ORDER BY SUM(pages) DESC;
+  ORDER BY pages_written DESC;
 
 -- Query to find the total number of pages written & the number of books written by an author
 SELECT
   author_fname,
   author_lname,
-  SUM(pages) AS 'Pages Written',
-  COUNT(*) AS 'Books Written'
+  SUM(pages) AS pages_written,
+  COUNT(*) AS books_written
 FROM books
   GROUP BY author_fname, author_lname
-  ORDER BY SUM(pages) DESC, COUNT(*) DESC;
+  ORDER BY pages_written DESC, books_written DESC;

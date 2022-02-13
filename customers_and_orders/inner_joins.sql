@@ -63,7 +63,8 @@ GROUP BY o.customer_id;
 -- Get the amount on all orders on each customer
 SELECT
   CONCAT_WS(' ', c.first_name, c.last_name) AS 'Name',
-  SUM(o.amount) AS 'Total Amount'
+  SUM(o.amount) AS total_amount
 FROM customers AS c INNER JOIN orders AS o
 ON c.id = o.customer_id
-GROUP BY o.customer_id;
+GROUP BY o.customer_id
+ORDER BY total_amount DESC;
