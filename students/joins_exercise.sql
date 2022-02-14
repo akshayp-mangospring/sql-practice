@@ -38,7 +38,7 @@ SELECT
   s.first_name,
   IFNULL(AVG(p.grade), 0) AS average,
   UCASE(
-    IF(AVG(p.grade) > 75, 'Passing', 'Failing')
+    IF(AVG(p.grade) > 74, 'Passing', 'Failing')
   ) AS passing_status
 FROM students AS s LEFT JOIN papers AS p
 ON s.id = p.student_id
